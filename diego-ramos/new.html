@@ -48,11 +48,13 @@
       <section id="write" class="tab-content">
         <h1>Create New Article</h1>
         <form>
-          <input name="title" placeholder="Title">
-          <input name="author" placeholder="Author Name">
-          <input name="authorUrl" placeholder="Author URL">
-          <input name="category" placeholder="Category Name">
-          <textarea name="body" placeholder="article Content Here"></textarea>
+          <input name="title" id='title' placeholder="Title">
+          <input name="author" id='author' placeholder="Author Name">
+          <input name="authorUrl" id='authorUrl' placeholder="Author URL">
+          <input name="category" id='category' placeholder="Category Name">
+          <textarea name="body" id='body' placeholder="article Content Here"></textarea>
+          <input type="checkbox"  id="article-published" name="feature" value="published" />
+          <label for="published">Published</label>
         </form>
         <!-- Set up a form to accept user input for a new blog article. Remember that we need:
            1. Article title
@@ -61,13 +63,18 @@
            4. Author's URL
            5. Article category
            6. Some way to know if this article is a draft or is published -->
+          
       </section>
 
       <section id="articles" class="tab-content">
         <!-- NOTE: This is where we will display our article preview -->
+
       </section>
 
       <section id="article-export">
+        <input id="json-output" for="article-json" type="text" readonly />
+        <p id="article-json" class='pull-right'>Paste into blogArticles.js datafile!</p>
+
         <!-- TODO: Refer to the preview image to see what we will be building here: we need a container of some kind to hold a JSON export of our article. Ideally this container would show only a incipit (short preview) of the JSON and also be clickable to allow easy selection of the text it holds. What kind of element could we use for this? -->
       </section>
 
@@ -88,8 +95,8 @@
       //  Hint: Look in articleView.js for a function that does this.
 
       // COMMENT: What is this function doing? Why do we need it?
-      // PUT YOUR RESPONSE HERE
-      articleView.initIndexPage();
+      // this makes the new article page functional.
+      articleView.initNewArticlePage();
     </script>
   </body>
 </html>
